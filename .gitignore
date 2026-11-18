@@ -3,3 +3,4 @@ face-service/photos/
 __pycache__/
 node_modules/
 .env
+.DS_Store
