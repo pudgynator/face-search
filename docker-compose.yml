@@ -1,0 +1,13 @@
+services:
+    db:
+        image: pgvector/pgvector:pg17
+        environment:
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+            POSTGRES_DB: facesearch
+        ports:
+            - "5432:5432"
+        volumes: 
+        - pgdata:/var/lib/postgresql/data
+        - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+volumes:
+    pgdata:
