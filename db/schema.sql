@@ -1,0 +1,13 @@
+CREATE EXTENSION IF NOT EXISTS vector;
+
+CREATE TABLE images (
+  id SERIAL PRIMARY KEY,
+  filename TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE faces (
+  id SERIAL PRIMARY KEY,
+  image_id INTEGER NOT NULL REFERENCES images(id) ON DELETE CASCADE,
+  embedding vector(512) NOT NULL
+);
