@@ -7,7 +7,7 @@ export function Hero() {
             style={{
                 backgroundImage: "radial-gradient(#232830 1px, transparent 1px)",
                 backgroundSize: "22px 22px",
-              }}
+            }}
         >
             <div className="mx-auto flex max-w-[720px] flex-col items-center gap-4 text-center mb-3">
                 <p className="font-mono text-sm font-bold uppercase text-ink tracking-widest">
