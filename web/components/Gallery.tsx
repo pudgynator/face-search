@@ -1,14 +1,17 @@
 
 export function Gallery() {
     return(
-        <section className="p-2">
-            <div className="flex items-center justify-between">
-                <h3 className="text-ink text-lg font-bold">
+        <section className="flex-1 min-w-0">
+            <div className="flex items-baseline justify-between mb-5">
+                <h2 className="text-ink text-3xl font-bold tracking-tight">
                     All photos
-                </h3>
+                </h2>
                 <p className="text-muted text-sm">
-                    {'photos'}
+                    12 photos
                 </p>
+            </div>
+            <div className="grid">
+
             </div>
         </section>
     )
