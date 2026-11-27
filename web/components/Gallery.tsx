@@ -1,8 +1,9 @@
-import { Suspense } from "react";
+import { connection } from "next/server";
 import { pool } from "@/lib/db";
 import { PhotoCard, type Photo } from "@/components/PhotoCard";
 
 export async function Gallery() {
+    await connection();
     const { rows: photos } = await pool.query<Photo>(
          "SELECT id, filename FROM images ORDER BY created_at DESC"
     )
